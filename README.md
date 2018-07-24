@@ -27,4 +27,21 @@ Operation Environment
 Operation Instruction
 ----
 
+* First step
+Build a focus dictionary yourself(always by human-annotated).You could reference the folder `FouceAnalysis/关注点标注_new_未延展`.
 
+* Second step
+Running the hanlp_word_segementation.java on hadoop.Save the result to the localhost from the HDFS.
+
+* Third step.
+Running the word2vec_focusmap.py using the result you get in the Step 2 to extend your dictionary.
+
+* Forth step
+Running the focus_analysis.java on hadoop.Save the result.
+
+Output instance
+----
+
+* Output of the hanlp_word_segementation.java——`crf分词结果example`
+* Output of the word2vec_focusmap.py——the folder `FouceAnalysis/关注点标注_new_延展`
+* Output of the focus_analysis.java——`关注点分析_2018_example`
